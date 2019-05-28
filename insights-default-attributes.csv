@@ -1,0 +1,761 @@
+eventType,attribute,description
+AjaxRequest,appId,"The ID of your application, as recorded by New Relic."
+AjaxRequest,appName,The name of the application that handled the request as shown in New Relic Browser.
+AjaxRequest,asn,Autonomous System Number: a unique number identifying a group of IP networks that serves the content to the end-user.
+AjaxRequest,asnLatitude,The latitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's latitude.
+AjaxRequest,asnLongitude,The longitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's longitude.
+AjaxRequest,asnOrganization,"The organization that owns the Autonomous System Number. Often an ISP, sometimes a private company or institution."
+AjaxRequest,browserInteractionId,A unique value generated for each Browser interaction captured by the New Relic agent.
+AjaxRequest,browserInteractionName,The name of the interaction. This is either the targetGroupedURL or the custom name set via the API.
+AjaxRequest,city,"The city in which the PageView event occurred, such as Portland or Seattle."
+AjaxRequest,countryCode,"The country from which the browser initiated the page load. For a list of country codes, see ISO 3166-1 alpha-2."
+AjaxRequest,deviceType,"The type of device that loaded the page: either mobile, tablet, or desktop."
+AjaxRequest,eventId,"A value that you can link to multiple BrowserInteraction events so you can view the interactions that occurred surrounding a specific event. For example, you can see the browser interactions that occurred prior to a JS error."
+AjaxRequest,groupedPageURL,The grouped URL of the view that made the AJAX request. For example: myapp.com/acct/*/dash.
+AjaxRequest,groupedRequestUrl,The grouped URL of the AJAX request. For example: myapp.com/acct/*/ajax.
+AjaxRequest,hostname,The fully qualified domain name (FQDN) of the request URL.
+AjaxRequest,httpMethod,The HTTP method of the AJAX request. Example: POST.
+AjaxRequest,httpResponseCode,The HTTP response code. Example: 200.
+AjaxRequest,jsDuration,"The total duration, in seconds, spent on JavaScript execution. (This attribute doesn't exist for initial page load events.)"
+AjaxRequest,pageUrl,The URL of the page that was loaded for the PageView. For example: http://www.newrelic.com. This URL does not include query parameters.
+AjaxRequest,parentEventId,A unique value generated for each interaction with the page. You can use this value to group interactions together.
+AjaxRequest,port,The request port.
+AjaxRequest,priority,Likelihood this event will be saved.
+AjaxRequest,regionCode,"The specific administrative division within a country where the PageView event occurred. In the United States, regions correspond to state codes, such as WA or NY. Outside the United States, a country's regions correspond to numerical codes."
+AjaxRequest,requestBodySize,"The payload size of the request body, in bytes."
+AjaxRequest,requestUrl,The URL of the AJAX request. For example: myapp.com/acct/1/ajax.
+AjaxRequest,responseBodySize,"The payload size of the response body, in bytes."
+AjaxRequest,session,A unique identifier for a single session. Sessions expire when the user closes the browser. A new identifier will be assigned when the user opens up a new browser window.
+AjaxRequest,timeSinceBrowserInteractionStart,The time in seconds between the start of the BrowserInteraction and the start of the request.
+AjaxRequest,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+AjaxRequest,timeToLastCallbackEnd,"The duration, in seconds, from the start of the request (timestamp) to the end of the last callback. This is not just an additive function; the callback time can overlap with the wait time."
+AjaxRequest,timeToLoadEventStart,"The time, in seconds, from the start of the interaction to the loadEventStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+AjaxRequest,timeToSettle,"The time, in seconds, from the start of the request to when all resulting callbacks (including callbacks of subsequent AJAX requests) are complete."
+AjaxRequest,userAgentName,"The browser’s name, such as Chrome and Firefox, obtained from the “User-Agent” header of an HTTP request."
+AjaxRequest,userAgentOS,"The browser’s reported operating system, such as Windows or Linux, that it is running on which is obtained from the “User-Agent” header of a HTTP request."
+AjaxRequest,userAgentVersion,The browser’s reported software version which is obtained from the “User-Agent” header of an HTTP request.
+AwsLambdaInvocation,aws.coldStart,A boolean indicating if the AWS Lambda invocation is a cold start.
+AwsLambdaInvocation,aws.lambda.arn,The Amazon Resource Name (ARN) of the instrumented Lambda function.
+AwsLambdaInvocation,aws.lambda.eventSource.arn,The Amazon Resource Name (ARN) of the entity that invoked the instrumented Lambda function.
+AwsLambdaInvocation,aws.requestId,AWS identifier of the invocation.
+AwsLambdaInvocation,databaseCallCount,The number of database calls made by this transaction.
+AwsLambdaInvocation,databaseDuration,The database response time in seconds.
+AwsLambdaInvocation,duration,"The total invocation time for the transaction, in seconds."
+AwsLambdaInvocation,duration,"The total invocation time for the transaction, in seconds."
+AwsLambdaInvocation,externalCallCount,The number of external calls made by this transaction.
+AwsLambdaInvocation,externalDuration,"The total response time of all externals, in seconds."
+AwsLambdaInvocation,httpResponseCode,The HTTP response code associated with the transaction.
+AwsLambdaInvocation,parent.account,"If a distributed tracing payload is received, this is the account identifier for the transaction's upstream caller."
+AwsLambdaInvocation,parent.app,"If a distributed tracing payload is received, this is the application identifier. APM agents retrieve this value in the connect response under the key `primary_application_id`."
+AwsLambdaInvocation,parent.transportType,"When a distributed tracing payload is received, the method of transport for the payload. For example: `Unknown`, `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP, `Queue`, or `Other`."
+AwsLambdaInvocation,parent.type,"If a distributed trace payload was received, the parent's data source type. For example: `App`, `Browser`, or `Mobile`."
+AwsLambdaInvocation,request.headers.contentLength,Incoming request size in bytes as read from the Content-Length HTTP request header.
+AwsLambdaInvocation,request.headers.contentType,Incoming request content-type as read from the HTTP request header Content-Type. For example: `application/octet-stream`.
+AwsLambdaInvocation,request.headers.host,The name from the HTTP host request header.
+AwsLambdaInvocation,request.headers.referer,The incoming request referer as read from the Referer request header.
+AwsLambdaInvocation,request.headers.User-Agent,The contents of the User-Agent HTTP header.
+AwsLambdaInvocation,request.method,The HTTP request method used. For example: `POST` or `GET`.
+AwsLambdaInvocation,requests.header.accept,The types as read from the HTTP Accept request header.
+AwsLambdaInvocation,response.headers.contentLength,The outgoing response size in bytes as read from the Content-Length response header.
+AwsLambdaInvocation,response.headers.contentType,"For an HTTP response, the data type of the returned response. For example: `text/html` or `application/json`."
+AwsLambdaInvocation,totalTime,"The sum of all async components' duration, in seconds. An async component is a method or function where there is no instrumented encapsulating method or function."
+AwsLambdaInvocation,type,The New Relic event type. For example: `Transaction` or `Span`.
+AwsLambdaInvocationError,aws.coldStart,A boolean indicating if the AWS Lambda invocation is a cold start.
+AwsLambdaInvocationError,aws.lambda.arn,The Amazon Resource Name (ARN) of the instrumented Lambda function.
+AwsLambdaInvocationError,aws.lambda.eventSource.arn,The Amazon Resource Name (ARN) of the entity that invoked the instrumented Lambda function.
+AwsLambdaInvocationError,aws.requestId,AWS identifier of the invocation.
+AwsLambdaInvocationError,databaseCallCount,The number of database calls made by this transaction.
+AwsLambdaInvocationError,databaseDuration,The database response time in seconds.
+AwsLambdaInvocationError,duration,"The total invocation time for the transaction, in seconds."
+AwsLambdaInvocationError,duration,"The total invocation time for the transaction, in seconds."
+AwsLambdaInvocationError,error.class,The class name or type for the error. This will be server and platform specific.
+AwsLambdaInvocationError,error.message,The error message for the transaction. This will be server and platform specific.
+AwsLambdaInvocationError,externalCallCount,The number of external calls made by this transaction.
+AwsLambdaInvocationError,externalDuration,"The total response time of all externals, in seconds."
+AwsLambdaInvocationError,httpResponseCode,The HTTP response code associated with the transaction.
+AwsLambdaInvocationError,parent.account,"If a distributed tracing payload is received, this is the account identifier for the transaction's upstream caller."
+AwsLambdaInvocationError,parent.app,"If a distributed tracing payload is received, this is the application identifier. APM agents retrieve this value in the connect response under the key `primary_application_id`."
+AwsLambdaInvocationError,parent.transportType,"When a distributed tracing payload is received, the method of transport for the payload. For example: `Unknown`, `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP, `Queue`, or `Other`."
+AwsLambdaInvocationError,parent.type,"If a distributed trace payload was received, the parent's data source type. For example: `App`, `Browser`, or `Mobile`."
+AwsLambdaInvocationError,request.headers.contentLength,Incoming request size in bytes as read from the Content-Length HTTP request header.
+AwsLambdaInvocationError,request.headers.contentType,Incoming request content-type as read from the HTTP request header Content-Type. For example: `application/octet-stream`.
+AwsLambdaInvocationError,request.headers.host,The name from the HTTP host request header.
+AwsLambdaInvocationError,request.headers.referer,The incoming request referer as read from the Referer request header.
+AwsLambdaInvocationError,request.headers.User-Agent,The contents of the User-Agent HTTP header.
+AwsLambdaInvocationError,request.method,The HTTP request method used. For example: `POST` or `GET`.
+AwsLambdaInvocationError,requests.header.accept,The types as read from the HTTP Accept request header.
+AwsLambdaInvocationError,response.headers.contentLength,The outgoing response size in bytes as read from the Content-Length response header.
+AwsLambdaInvocationError,response.headers.contentType,"For an HTTP response, the data type of the returned response. For example: `text/html` or `application/json`."
+AwsLambdaInvocationError,stackTrace,The error stack trace. The format will be different depending on the agent language.
+AwsLambdaInvocationError,transactionName,Name of the transaction in which the error occurred. For example: `Controller/customers/show`. Value may be `Unknown` if error occurs outside of a transaction.
+AwsLambdaInvocationError,type,The New Relic event type. For example: `Transaction` or `Span`.
+BrowserInteraction,actionText,The text of the HTML element that was clicked when a browser interaction started.
+BrowserInteraction,ajaxCount,A count of all XHRs included in the timing of a SPA interaction.
+BrowserInteraction,appId,"The ID of your application, as recorded by New Relic."
+BrowserInteraction,appName,The name of the application that handled the request as shown in New Relic Browser.
+BrowserInteraction,asn,Autonomous System Number: a unique number identifying a group of IP networks that serves the content to the end-user.
+BrowserInteraction,asnLatitude,The latitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's latitude.
+BrowserInteraction,asnLongitude,The longitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's longitude.
+BrowserInteraction,asnOrganization,"The organization that owns the Autonomous System Number. Often an ISP, sometimes a private company or institution."
+BrowserInteraction,backendTransactionName,The name of the backend transaction that served the initial page load.
+BrowserInteraction,browserInteractionId,A unique value generated for each Browser interaction captured by the New Relic agent.
+BrowserInteraction,browserInteractionName,The name of the interaction. This is either the targetGroupedURL or the custom name set via the API.
+BrowserInteraction,category,"The type of interaction; either initial page load, route change, or custom."
+BrowserInteraction,city,"The city in which the PageView event occurred, such as Portland or Seattle."
+BrowserInteraction,countryCode,"The country from which the browser initiated the page load. For a list of country codes, see ISO 3166-1 alpha-2."
+BrowserInteraction,deviceType,"The type of device that loaded the page: either mobile, tablet, or desktop."
+BrowserInteraction,domain,The domain portion of the request URL.
+BrowserInteraction,duration,"The total duration, in seconds, of the interaction event"
+BrowserInteraction,eventId,"A value that you can link to multiple BrowserInteraction events so you can view the interactions that occurred surrounding a specific event. For example, you can see the browser interactions that occurred prior to a JS error."
+BrowserInteraction,jsDuration,"The total duration, in seconds, spent on JavaScript execution. (This attribute doesn't exist for initial page load events.)"
+BrowserInteraction,monitorAccountId,The Synthetics account from which you are running the monitor.
+BrowserInteraction,monitorId,A unique number identifying a particular monitor.
+BrowserInteraction,monitorJobId,"The ID of a single Synthetics monitor run, which began at a specific time and originated from a specific location."
+BrowserInteraction,parentEventId,A unique value generated for each interaction with the page. You can use this value to group interactions together.
+BrowserInteraction,previousGroupedUrl,The grouped version of the URL in the browser at the start of the interaction.
+BrowserInteraction,previousRouteName,The route name of the page at the start of the interaction. This is the last value passed by setCurrentRouteName before the start of the interaction.
+BrowserInteraction,previousURL,The ungrouped URL in the browser at the start of the interaction.
+BrowserInteraction,regionCode,"The specific administrative division within a country where the PageView event occurred. In the United States, regions correspond to state codes, such as WA or NY. Outside the United States, a country's regions correspond to numerical codes."
+BrowserInteraction,session,A unique identifier for a single session. Sessions expire when the user closes the browser. A new identifier will be assigned when the user opens up a new browser window.
+BrowserInteraction,targetGroupedUrl,The grouped version of the URL in the browser at the end of the interaction.
+BrowserInteraction,targetRouteName,The route name for the page at the end of the interaction. The last value passed by setCurrentRouteName before the end of the interaction.
+BrowserInteraction,targetUrl,The ungrouped URL in the browser at the end of the interaction.
+BrowserInteraction,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+BrowserInteraction,timeToConnectEnd,"The time, in seconds, from the start of the interaction to the connectEnd, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToConnectStart,"The time, in seconds, from the start of the interaction to the connectStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToDomainLookupEnd,"The time, in seconds, from the start of the interaction to the domainLookupEnd, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToDomainLookupStart,"The time, in seconds, from the start of the interaction to the domainLookupStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToDomComplete,"The time, in seconds, from the start of the interaction to the domComplete, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToDomContentLoadedEventEnd,"The time, in seconds, from the start of the interaction to the domContentLoadedEventEnd, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToDomContentLoadedEventStart,"The time, in seconds, from the start of the interaction to the domContentLoadedEventStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToDomInteractive,"The time, in seconds, from the start of the interaction to the domInteractive, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToDomLoading,"The time, in seconds, from the start of the interaction to the domLoading, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToFetchStart,"The time, in seconds, from the start of the interaction to the fetchStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToLoadEventEnd,"The time, in seconds, from the start of the interaction to the loadEventEnd, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToLoadEventStart,"The time, in seconds, from the start of the interaction to the loadEventStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToRedirectEnd,"The time, in seconds, from the start of the interaction to the redirectEnd, as defined by the Navigation Timing API. This attribute exists only for initial page load events, not route changes."
+BrowserInteraction,timeToRedirectStart,"The time, in seconds, from the start of the interaction to the redirectStart, as defined by the Navigation Timing API. This attribute exists only for initial page load events, not route changes."
+BrowserInteraction,timeToRequestStart,"The time, in seconds, from the start of the interaction to the requestStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToResponseEnd,"The time, in seconds, from the start of the interaction to the responseEnd, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToResponseStart,"The time, in seconds, from the start of the interaction to the responseStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToSecureConnectionStart,"The time, in seconds, from the start of the interaction to the secureConnectionStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToUnloadEventEnd,"The time, in seconds, from the start of the interaction to the unloadEventEnd, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,timeToUnloadEventStart,"The time, in seconds, from the start of the interaction to the unloadEventStart, as defined by the Navigation Timing API. This attribute exists for initial page load events, not route changes."
+BrowserInteraction,trigger,"The cause of the route change or page load. The default values are click, submit, popstate, or initial page load. For a custom event created with the API, the default value for trigger will be api. This value can also be set via the API."
+BrowserInteraction,userAgentName,"The browser’s name, such as Chrome and Firefox, obtained from the “User-Agent” header of an HTTP request."
+BrowserInteraction,userAgentOS,"The browser’s reported operating system, such as Windows or Linux, that it is running on which is obtained from the “User-Agent” header of a HTTP request."
+BrowserInteraction,userAgentVersion,The browser’s reported software version which is obtained from the “User-Agent” header of an HTTP request.
+BrowserTiming,appId,"The ID of your application, as recorded by New Relic."
+BrowserTiming,appName,The name of the application that handled the request as shown in New Relic Browser.
+BrowserTiming,asn,Autonomous System Number: a unique number identifying a group of IP networks that serves the content to the end-user.
+BrowserTiming,asnLatitude,The latitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's latitude.
+BrowserTiming,asnLongitude,The longitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's longitude.
+BrowserTiming,asnOrganization,"The organization that owns the Autonomous System Number. Often an ISP, sometimes a private company or institution."
+BrowserTiming,browserInteractionId,A unique value generated for each Browser interaction captured by the New Relic agent.
+BrowserTiming,browserInteractionName,The name of the interaction. This is either the targetGroupedURL or the custom name set via the API.
+BrowserTiming,browserTimingName,The name of the event. This is taken from the name argument of createTracer.
+BrowserTiming,city,"The city in which the PageView event occurred, such as Portland or Seattle."
+BrowserTiming,countryCode,"The country from which the browser initiated the page load. For a list of country codes, see ISO 3166-1 alpha-2."
+BrowserTiming,deviceType,"The type of device that loaded the page: either mobile, tablet, or desktop."
+BrowserTiming,eventId,"A value that you can link to multiple BrowserInteraction events so you can view the interactions that occurred surrounding a specific event. For example, you can see the browser interactions that occurred prior to a JS error."
+BrowserTiming,groupedPageURL,The grouped URL of the view that made the AJAX request. For example: myapp.com/acct/*/dash.
+BrowserTiming,jsDuration,"The total duration, in seconds, spent on JavaScript execution. (This attribute doesn't exist for initial page load events.)"
+BrowserTiming,pageUrl,The URL of the page that was loaded for the PageView. For example: http://www.newrelic.com. This URL does not include query parameters.
+BrowserTiming,parentEventId,A unique value generated for each interaction with the page. You can use this value to group interactions together.
+BrowserTiming,regionCode,"The specific administrative division within a country where the PageView event occurred. In the United States, regions correspond to state codes, such as WA or NY. Outside the United States, a country's regions correspond to numerical codes."
+BrowserTiming,session,A unique identifier for a single session. Sessions expire when the user closes the browser. A new identifier will be assigned when the user opens up a new browser window.
+BrowserTiming,timeSinceBrowserInteractionStart,The time in seconds between the start of the BrowserInteraction and the start of the request.
+BrowserTiming,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+BrowserTiming,timeToLastCallbackEnd,"The duration, in seconds, from the start of the request (timestamp) to the end of the last callback. This is not just an additive function; the callback time can overlap with the wait time."
+BrowserTiming,timeToSettle,"The time, in seconds, from the start of the request to when all resulting callbacks (including callbacks of subsequent AJAX requests) are complete."
+BrowserTiming,timeToTracedCallbackStart,The time in seconds from the start of the custom tracer until the start of the traced callback. This attribute is unique to the BrowserTiming event.
+BrowserTiming,tracedCallbackDuration,The duration in seconds of the traced callback. This attribute is unique to the BrowserTiming event.
+BrowserTiming,userAgentName,"The browser’s name, such as Chrome and Firefox, obtained from the “User-Agent” header of an HTTP request."
+BrowserTiming,userAgentOS,"The browser’s reported operating system, such as Windows or Linux, that it is running on which is obtained from the “User-Agent” header of a HTTP request."
+BrowserTiming,userAgentVersion,The browser’s reported software version which is obtained from the “User-Agent” header of an HTTP request.
+InfrastructureEvent,category,"A New Relic category used to organize events in the UI. For example: automation, notification, and service."
+InfrastructureEvent,changedPath,The fully specified name of the item that changed. This is constructed by taking the source and adding one or more additional path elements that uniquely identify the item that changed.
+InfrastructureEvent,changeType,"A simple classification of the type of change made to the entity: added, modified, or removed."
+InfrastructureEvent,deltaId,Delta refers to a recorded change in the system. The deltaId is a number used by New Relic to organize incoming inventory change data.
+InfrastructureEvent,eventId,"The unique ID of the event, generated by New Relic."
+InfrastructureEvent,format,The type of infrastructure event. Each format type includes attributes that may be used to render the event in the UI.
+InfrastructureEvent,newStatus,The new agent status: disconnected or connected.
+InfrastructureEvent,newValue,"If a change is made to the entity, this attribute contains the new value of the inventory that was changed. This will have no value if no change has been made. The value will display approximately 4K bytes of data."
+InfrastructureEvent,oldValue,"If a change is made to the entity, this attribute contains the old value of the inventory that was changed. This will be blank if no change has been made."
+InfrastructureEvent,provider,"For integrations that use generic event types (like the DatastoreSample event), the provider value specifies the source of the data (the service, or a sub-category of data from that service)."
+InfrastructureEvent,source,"The fully specified origin of this inventory item. This is typically in the form category/plugin, where plugin is the generic word used for the tool that gathered this data."
+InfrastructureEvent,summary,"A summary of the change that happened. Uses a human-friendly string, such as Agent disconnected."
+InfrastructureEvent,violationUpdateType,The type of change to the violation: For example: open or closed.
+JavaScriptError,appId,The identification number for the reporting browser agent.
+JavaScriptError,appName,The name of the application that handled the request as shown in New Relic Browser.
+JavaScriptError,browserInteractionId,A unique value generated for each Browser interaction captured by the New Relic agent.
+JavaScriptError,browserStackHash,An unique identifier generated for a stack trace. The browserStackHash for a stack trace is different across different browsers. An identical stack trace will generate the same identifier.
+JavaScriptError,deviceType,"The type of device that loaded the page: either mobile, tablet, or desktop."
+JavaScriptError,errorClass,The error type.
+JavaScriptError,errorMessage,The error message that was delivered.
+JavaScriptError,firstErrorInSession,A value to indicate whether or not this was the first JS error in the session. Example: true.
+JavaScriptError,parentEventId,A unique value generated for each interaction with the page. You can use this value to group interactions together.
+JavaScriptError,releaseIds,"The releases in which the app was updated. Example: {\""jQuery\"":\""v3.1.1\"",\""multiverse\"":\""96e9ac7\""}."
+JavaScriptError,requestUri,The URI of the requested resource.
+JavaScriptError,stackHash,A unique identifier generated by the Browser agent for a stack trace. The stackHash for a stack trace is the same across different browsers. An identical stack trace will generate the same identifier.
+JavaScriptError,stackTrace,A collection of the active stack frames when the error occurred.
+JavaScriptError,timestamp,"The time that the error occurred, in Unix time."
+JavaScriptError,transactionName,"The full metric name of the transaction in which the error occurred, or Unknown if the error occurs outside of a transaction."
+JavaScriptError,userAgentName,"The browser’s name, such as Chrome and Firefox, obtained from the “User-Agent” header of an HTTP request."
+JavaScriptError,userAgentOS,"The browser’s reported operating system, such as Windows or Linux, that it is running on which is obtained from the “User-Agent” header of a HTTP request."
+JavaScriptError,userAgentVersion,The browser’s reported software version which is obtained from the “User-Agent” header of an HTTP request.
+Mobile,category,"The type of data, either session or interaction."
+Mobile,interactionDuration,"For interaction category events only. This is the total time for the interaction to render on the device. In addition to render time, this usually includes all external calls associated with the interaction.  Currently, this attribute is measured in seconds for Android devices and in milliseconds for iOS devices."
+Mobile,name,For interaction category events only. This is the label of the interaction associated with the event. It is by default assigned by New Relic.  For example: ApplicationsListFragment or Display iOS_Example.MasterViewController.
+Mobile,reportedTimestampMs,"For interaction category events only. The UTC based timestamp for when the event was sent to New Relic. This is different from the attribute ‘timestamp’, which is when the event began."
+MobileCrash,architecture,The processor architecture of the device. For example: armv7 or arm64.
+MobileCrash,bundleId,The unique string used to identify the application.
+MobileCrash,crashException,"The exception associated with the crash, if one is present. For example: java.lang.NullPointerException."
+MobileCrash,crashFingerprint,The New Relic-generated fingerprint used to uniquely identify the crash and other crashes identical to this one.
+MobileCrash,crashLocationFile,The file in which the crash occurred.
+MobileCrash,crashMessage,"The message associated with the crash, if one is present."
+MobileCrash,diskAvailable,"Space available on the device, in bytes."
+MobileCrash,interactionHistory,The client interactions with the application that led to the crash.
+MobileCrash,isFirstOccurrence,A boolean value indicating whether or not this was the first occurrence of the crash.
+MobileCrash,modelNumber,The model of the device. This is the same as the session-level deviceModel attribute.
+MobileCrash,networkStatus,"The type of network that the device was on at the time of crash, such as wifi or LTE."
+MobileCrash,occurrenceId,The ID for this instance of the crash.
+MobileCrash,orientation,"The orientation of the device, such as landscape or portrait."
+MobileCrash,osBuild,For Android only. The specific build of the Android OS.
+MobileCrash,parentProcess,The parent process that launched the crashing process.
+MobileCrash,parentProcessId,The parent identification number (PID) of the parent process.
+MobileCrash,processId,The PID of the previously running process on the device.
+MobileCrash,processName,The name of the previously running process.
+MobileCrash,processPath,The path to the binary.
+MobileCrash,reportedTimestampMs,"The UTC timestamp for when the event was received by New Relic. (This is different from timestamp, which is when the MobileSession event began that crashed.)"
+MobileCrash,sessionCrashed,A boolean value indicating whether or not that session crashed.
+MobileCrash,symbolicated,A boolean value indicating whether or not the crash was properly symbolicated.
+MobileCrash,timeSinceLastInteraction,"The time, in seconds, since the interaction before a crash event."
+MobileCrash,userImageUuids,The array of build UUIDs for applications and libraries.
+MobileHandledException,exceptionAppBuildUuid,The build identifier (uuid) of the binary in which the exception was caught.
+MobileHandledException,exceptionCause,The platform-specific cause of the exception.
+MobileHandledException,exceptionLocation,"New Relic defined location of an exception. Contains a combination of exception file name, class, line number, and method."
+MobileHandledException,exceptionLocationClass,Comes from the exception: The class that generated the exception.
+MobileHandledException,exceptionLocationFile,Comes from the exception: The file where the exception was generated.
+MobileHandledException,exceptionLocationLine,Comes from the exception: The line number where the exception was generated.
+MobileHandledException,exceptionLocationMethod,Comes from the exception: The method that generated the exception..
+MobileHandledException,exceptionMessage,"Message associated with the exception. For Android, the Throwable message. An exception message comes from the exception. The message can be user-generated or a generic system message such as Null pointer."
+MobileHandledException,exceptionName,The potentially symbolicated or deobfuscated exception type.
+MobileRequest,bytesReceived,"Optional: If the application received a response from the requestUrl, the size of that response in bytes."
+MobileRequest,bytesSent,"Optional: If the application sent a request to the requestUrl, the size of that request in bytes."
+MobileRequest,connectionType,"The type of connection which the device was using, such as 2G or 3G."
+MobileRequest,deviceSize,"The display size of the device: Small, normal, large, xlarge."
+MobileRequest,requestDomain,The domain that the application attempted to access when the request occurred.
+MobileRequest,requestMethod,"The REST method (GET, PUT, POST, etc.) that the application attempted when the request occurred."
+MobileRequest,requestPath,The path that the application attempted to access when the request occurred.
+MobileRequest,requestUrl,The URL that the application attempted to access when the request occurred.
+MobileRequest,responseTime,The time between the request and the response in fractional seconds.
+MobileRequest,statusCode,"If the request is an HTTP Request, New Relic will record the statusCode of that request. You can facet on any statusCode or query for codes you're interested in."
+MobileRequestError,bytesReceived,"Optional: If the application received a response from the requestUrl, the size of that response in bytes."
+MobileRequestError,bytesSent,"Optional: If the application sent a request to the requestUrl, the size of that request in bytes."
+MobileRequestError,connectionType,"The type of connection which the device was using, such as 2G or 3G."
+MobileRequestError,deviceSize,"The display size of the device: Small, normal, large, xlarge."
+MobileRequestError,errorType,"Either HTTPError or NetworkFailure, depending on whether the error is a result of a failed request to a host or a failure on the cellular network."
+MobileRequestError,networkError,The error message associated with the iOS NSURL Error code. See networkErrorCode for more information.
+MobileRequestError,networkErrorCode,"If the error is a network error, this is the iOS network error code. For Android applications, this is the mapped value."
+MobileRequestError,requestDomain,The domain that the application attempted to access when the error occurred.
+MobileRequestError,requestMethod,"The REST method (GET, PUT, POST, etc.) that the application attempted when the error occurred."
+MobileRequestError,requestPath,The path that the application attempted to access when the error occurred.
+MobileRequestError,requestUrl,The URL that the application attempted to access when the error occurred.
+MobileRequestError,responseBody,"Optional: The response that is sent from the requestDomain for the HTTP error, up to 4096 bytes."
+MobileRequestError,responseTime,The time between the request and the response in fractional seconds.
+MobileRequestError,statusCode,"If the error is an HTTPError, New Relic will record the statusCode of that error. You can facet on any statusCode or query for codes you're interested in."
+MobileSession,appBuild,"Indicates the technical build number of the binary that crashed. As a developer, you can use this attribute to see exactly which build of your app crashed."
+MobileSession,appId,"A unique identifier for a monitored app, based on the app token. For example: 35091."
+MobileSession,appName,The name of the monitored app. For example: My Mobile App - iOS.
+MobileSession,appVersion,The version number of the monitored app. For example: 2.2.9.
+MobileSession,appVersionId,An identifier for the specific version of the app. For example: 1713477.
+MobileSession,asn,Autonomous System Number: a unique number identifying a group of IP networks that serves the content to the end-user.
+MobileSession,asnOwner,The telecom owner of the ASN.
+MobileSession,carrier,"The mobile network over which the app transferred data, such as wifi, Verizon, or Sprint."
+MobileSession,category,"The type of data, either session or interaction."
+MobileSession,city,"The city in which the PageView event occurred, such as Portland or Seattle."
+MobileSession,countryCode,"The country from which the browser initiated the page load. For a list of country codes, see ISO 3166-1 alpha-2."
+MobileSession,device,"The specific type of the device: iPhone 8, iPad Pro, etc."
+MobileSession,deviceGroup,"The category of the device, such as iPhone or Tablet."
+MobileSession,deviceManufacturer,"The manufacturer of the device, such as Motorola or HTC."
+MobileSession,deviceModel,"The model number of the device, such as XT1039 or SM-G900F."
+MobileSession,deviceType,"The specific type of device: iPhone 8, iPad Pro, etc."
+MobileSession,deviceUuid,The specific UUID of the device assigned by New Relic.
+MobileSession,install,Indicates true only if the current session is the first session after app install.
+MobileSession,lastInteraction,"The last interaction before a crash event, if one is present, such as App Launch."
+MobileSession,memUsageMb,"The total amount of memory, in MB, used by the application. Updated every 60 seconds."
+MobileSession,newRelicAgent,The New Relic agent running on the application. For example: the iOSAgent or the androidAgent.
+MobileSession,newRelicVersion,The version number of the agent running on the application. For example: 4.232.0.
+MobileSession,osMajorVersion,"The simplified version number of the app's host operating system, such as iOS 11, as compared to iOS 11.0.4."
+MobileSession,osName,"The name of the app's host operating system, for example, iOS or Android."
+MobileSession,osVersion,"The exact version number of the app's host operating system, such as iOS 11.0.4, as compared to iOS 11."
+MobileSession,platform,"The platform type of the New Relic Mobile agent, such as Android, iOS, or Cordova."
+MobileSession,platformVersion,The version number of the New Relic Mobile agent running on the application. For example: 4.232.0.
+MobileSession,regionCode,"The specific region within a country where the monitored app is located. In the United States, regions are states."
+MobileSession,sessionDuration,"The length of time for which the user used the application in seconds. If the session crashes, sessionDuration is not captured (although other events and attributes are still recorded)."
+MobileSession,sessionId,A unique identifier for a single user session. A new sessionId is created each time the app is brought into the foreground.
+MobileSession,timeSinceLoad,"The time, in seconds, from the beginning of the mobile session to the time the event occurred."
+MobileSession,timestamp,The UTC epoch time at which an event began.
+MobileSession,upgradeFrom,Indictates previous version number only if this is the first launch after app upgrade.
+MobileSession,uuid,A unique identifier for a specific app on a particular device. Also found in deviceUuid. Resets on reinstallation of the app. For example: B8B0BC30-0235-11E4-9191-0800200C9A66
+NetworkSample,agentName,The name of the agent (Infrastructure).
+NetworkSample,agentVersion,The version of the New Relic Infrastructure agent.
+NetworkSample,entityID,New Relic's unique ID number for the entity that is reporting data. This is used by New Relic to distinguish between customers and their entities.
+NetworkSample,fullHostname,The fully qualified (DNS) hostname.
+NetworkSample,hardwareAddress,The unique hardware address of the interface.
+NetworkSample,hostname,The short version of the entity's name.
+NetworkSample,interfaceName,The interface name as reported by the operating system.
+NetworkSample,ipV4Address,The IP version 4 address.
+NetworkSample,ipV6Address,The IP version 6 address.
+NetworkSample,kernelVersion,"The Linux kernel version, in string format."
+NetworkSample,linuxDistribution,The name of the Linux distribution the server is using.
+NetworkSample,operatingSystem,The operating system on which the agent is installed.
+NetworkSample,operatingSystem,The operating system on which the agent is installed.
+NetworkSample,receiveBytesPerSecond,The number of bytes per second received during the sampling period.
+NetworkSample,receiveDroppedPerSecond,The number of received packets per second dropped during the sampling period.
+NetworkSample,receiveErrorsPerSecond,The number of receive errors per second on the interface during the sampling period.
+NetworkSample,receivePacketsPerSecond,The number of packets per second (as defined by OS) received during the sampling period.
+NetworkSample,state,The state of the entity: either up or down.
+NetworkSample,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+NetworkSample,transmitBytesPerSecond,The number of bytes sent per second during the sampling period.
+NetworkSample,transmitDroppedPerSecond,The number of dropped send packets per second during the sampling period.
+NetworkSample,transmitErrorsPerSecond,The number of send errors per second on the interface during the sampling period.
+NetworkSample,transmitPacketsPerSecond,The number of packets per second as defined by OS) sent during this sampling period.
+NetworkSample,windowsFamily,The Windows family indicates whether the OS is a server or desktop targeted system.
+NetworkSample,windowsPlatform,The full product name of the installed version of Windows.
+NetworkSample,windowsVersion,The combined Windows version and build-number string of the OS.
+NrAuditEvent,actionIdentifier,Indicates an action that was taken in a New Relic account.
+NrAuditEvent,actorAPIKey,ID of the API key taking action. The API key is partially obfuscated to ensure privacy of the key.
+NrAuditEvent,actorEmail,Email address for the person who made the change.
+NrAuditEvent,actorId,ID of the person taking action.
+NrAuditEvent,actorIpAddress,The IP address for the person or API key where the action initiated.
+NrAuditEvent,actorType,Identifies whether the action was initiated by a user (person) or with an API key that is not associated with a user.
+NrAuditEvent,description,Human-readable description of the action taken. For example: Added name@company.com to roles Browser manager.
+NrAuditEvent,id,Unique ID of the audit event.
+NrAuditEvent,targetId,"ID of the object (targetType) that changed. For example, if the targetType is a user, this is the person's New Relic user ID."
+NrAuditEvent,targetType,"The object that changed: account, role, or user."
+NrAuditEvent,timestamp,Date and time the audit event occurred. Used to specify a day or range of dates.
+NrDailyUsage,agentHostname,ID reported by the agent to uniquely identify the host for which this usage event is reported.
+NrDailyUsage,apmAgentMemoryBytes,"Bytes of RAM available to the host, as detected by the New Relic agent from the host OS."
+NrDailyUsage,apmAgentProcessorCount,"Number of logical CPU cores available to the host, as detected by the New Relic agent from the host OS."
+NrDailyUsage,apmAgentVersion,Version of the New Relic APM agent running in the application instance reporting this usage.
+NrDailyUsage,apmAppId,"ID uniquely identifying the application that is reporting this usage, as it appears in the APM product. Present only for events where usageType equals Application."
+NrDailyUsage,apmAppInstanceId,ID uniquely identifying the application instance (the process running the New Relic APM agent).
+NrDailyUsage,apmAppName,"Name of the application reporting this usage, as it appears in the APM product. Present only for events where usageType equals Application."
+NrDailyUsage,apmBillingInstanceSize,"Size of the host, for CU-based billing purposes."
+NrDailyUsage,apmCloudDerivedMemoryBytes,"Bytes of RAM available to the host, as defined by the cloud provider for the host's instance type."
+NrDailyUsage,apmCloudDerivedProcessorCount,"Number of logical processors available to the host, as defined by the cloud provider for the host's instance type."
+NrDailyUsage,apmComputeUnitRule,Describes the algorithm used to calculate the host size for CU usage.
+NrDailyUsage,apmComputeUnits,Number of compute units (CUs) recorded for the given host.
+NrDailyUsage,apmContainerCount,The number of unique container IDs associated with this host. Present only for events where usageType equals Host.
+NrDailyUsage,apmHoursUsed,Number of hours for which usage was recorded for the given entity.
+NrDailyUsage,apmLanguage,"Name of the language that the usage-reporting application is written in, as reported by the New Relic agent."
+NrDailyUsage,apmMemoryBytes,Bytes of RAM available to the host. Used to calculate apmBillingInstanceSize.
+NrDailyUsage,apmProcessorCount,"Number of logical processors available to the host, used to calculate apmBillingInstanceSize."
+NrDailyUsage,bootId,"Linux boot ID of host for which this usage is reported, which is unique for each boot lifetime of each Linux operating system instance."
+NrDailyUsage,browserAppId,"ID uniquely identifying the application reporting this usage, as it appears in the Browser product."
+NrDailyUsage,browserPageViewCount,Number of page views for an application for that 24-hour period.
+NrDailyUsage,cloudInstanceId,ID uniquely identifying the cloud host instance (example: an AWS EC2 instance) for which this usage is reported.
+NrDailyUsage,cloudInstanceSize,Size of the cloud instance for this host for CU-based APM billing purposes.
+NrDailyUsage,cloudInstanceType,Instance type of the host as defined by the cloud provider and detected by the agent.
+NrDailyUsage,cloudProvider,"Name of the cloud provider for this host. Example values: aws, azure. This will not be present if no cloud provider was detected by the agent."
+NrDailyUsage,cloudZone,Name of the zone that a cloud provider host is located in.
+NrDailyUsage,consumingAccountId,"ID of the New Relic account that is directly responsible for the stored events, as determined from the license key used."
+NrDailyUsage,consumingAccountName,"Name of the New Relic account that is directly responsible for the stored events, as determined from the license key used."
+NrDailyUsage,containerId,ID of the Docker or other Linux container in which the application instance is running.
+NrDailyUsage,hostId,ID used to uniquely identify the host for which this usage is reported.
+NrDailyUsage,infrastructureAgentMemoryBytes,"Bytes of RAM available to the host, used to calculate infrastructureBillingInstanceSize."
+NrDailyUsage,infrastructureAgentProcessorCount,"Number of logical CPU cores available to the host, used to calculate infrastructureBillingInstanceSize."
+NrDailyUsage,infrastructureAgentVersion,Version of the Infrastructure agent running on the host reporting this usage.
+NrDailyUsage,infrastructureBillingInstanceSize,"Size of the host, for CU billing purposes. Calculated as: number of processors multiplied by memory in gibibytes (GiB)."
+NrDailyUsage,infrastructureCloudDerivedMemoryBytes,"Bytes of RAM available to the host, as reported by the cloud provider, used to calculate infrastructureBillingInstanceSize."
+NrDailyUsage,infrastructureCloudDerivedProcessorCount,"Number of logical CPU cores available to the host, as reported by the cloud provider, used to calculate infrastructureBillingInstanceSize."
+NrDailyUsage,infrastructureComputeUnitRule,Describes the algorithm used to calculate the host size for CU usage.
+NrDailyUsage,infrastructureComputeUnits,Number of compute units (CUs) recorded for the given host.
+NrDailyUsage,infrastructureHoursUsed,"Number of hours for which usage was recorded for the given host. When a host is connected to New Relic for any amount of time within a given hour, that hour is counted toward usage."
+NrDailyUsage,insightsEventNamespace,"The type of event. For example: Transaction, MobileCrash, or SystemSample. Event namespaces are associated with a specific data retention period."
+NrDailyUsage,insightsIncludedEventCount,Count of all events of the given insightsEventNamespace stored for the retention period included with a paid non-Insights product subscription.
+NrDailyUsage,insightsIncludedRetentionInHours,Number of hours for which events of the given insightsEventNamespace are stored but are not counted toward your paid Insights Pro subscription.
+NrDailyUsage,insightsNrProduct,"New Relic product (Insights, APM, Browser, Mobile, etc.) that corresponds to the given insightsEventNamespace."
+NrDailyUsage,insightsTotalEventCount,Count of all events stored for the given insightsEventNamespace as of the given day.
+NrDailyUsage,insightsTotalRetentionInHours,Number of hours for which events of the given insightsEventNamespace are stored.
+NrDailyUsage,instanceSizeCapped,This is True if the calculated host size was greater than 16 and therefore capped.
+NrDailyUsage,isPrimaryApp,Boolean. true means the application is the primary app. false means the app is one of several apps that an agent reports data for.
+NrDailyUsage,masterAccountId,The ID of the master account that is either responsible for stored events or that is the parent of the consuming account.
+NrDailyUsage,masterAccountName,"Name of the master account that is either responsible for stored events, or that is the parent of the consuming account."
+NrDailyUsage,missingCpuData,This is True if the APM agent reports no CPU count.
+NrDailyUsage,missingRamData,This is True if the APM agent reports no memory count.
+NrDailyUsage,mobileAppId,"ID uniquely identifying the application reporting this usage, as it appears in the Mobile product."
+NrDailyUsage,mobileAppName,"Name of the application reporting this usage, as it appears in the Mobile product."
+NrDailyUsage,mobileUniqueUsersPerMonth,Number of unique users (device IDs) counted during the current calendar month to date for a Mobile app.
+NrDailyUsage,partnershipId,Partner ID of the New Relic customer partnership associated with the account responsible for the stored events.
+NrDailyUsage,partnershipName,Name of the New Relic customer partnership associated with the account responsible for the stored events.
+NrDailyUsage,productLine,The New Relic product the usage data is from. Use this attribute to identify / filter for product specific usage data.
+NrDailyUsage,subAccountId,"ID of the sub-account that is responsible for the stored event. When this attribute is present, subAccountId is the consumingAccountId."
+NrDailyUsage,subAccountName,"Name of the sub-account responsible for stored events. When present, this attribute is the same as the consumingAccountName."
+NrDailyUsage,syntheticsFailedCheckCount,Number of failed checks that ran on the given day for the given Synthetics monitor and location.
+NrDailyUsage,syntheticsLocation,Location the check ran in.
+NrDailyUsage,syntheticsLocationLabel,Human-readable label for the location of the check.
+NrDailyUsage,syntheticsMonitorId,Unique ID of the monitor.
+NrDailyUsage,syntheticsMonitorName,Name of the monitor.
+NrDailyUsage,syntheticsSuccessCheckCount,Number of successful checks that ran on the given day for the given Synthetics monitor and location.
+NrDailyUsage,syntheticsType,"The type of Synthetics monitor. Possible values: SIMPLE, BROWSER, SCRIPT_BROWSER, SCRIPT_API."
+NrDailyUsage,syntheticsTypeLabel,"Human-readable label for syntheticsType. Possible values: Ping, Simple Browser, Scripted Browser, Scripted API."
+NrDailyUsage,timestamp,UNIX timestamp (seconds since epoch) of the day and time when event generation was initiated.
+NrDailyUsage,usageType,"For APM, this value can be either Application or Host, depending on the type of entity this event records usage for (other New Relic products will have different values for usageType)."
+NrIntegrationError,apiKeyPrefix	,The first six characters of the Insert API key used for the request that generated an error.
+NrIntegrationError,category,"The category of the error. For custom events, this is EventApiException."
+NrIntegrationError,httpResponseCode,The HTTP response code associated with the transaction.
+NrIntegrationError,message,Contents of the error message.
+NrIntegrationError,name,"The error's name. For custom events, this is always EventValidationException."
+NrIntegrationError,newRelicFeature,"The name of the feature experiencing errors. For all custom event parsing errors, this will be Event API."
+NrIntegrationError,requestId	,The uuid returned by the the API for the request that generated an error.
+NrIntegrationError,timestamp,"The timestamp when the request was received. The timestamp attribute takes an unformatted Unix timestamp. You can define timestamps either in seconds or in milliseconds, both relative to the Unix epoch."
+PageAction,actionName,"The name of the PageAction, as defined by you in your code."
+PageAction,appId,"The ID of your application, as recorded by New Relic."
+PageAction,appName,The name of the application that handled the request as shown in New Relic Browser.
+PageAction,asn,Autonomous System Number: a unique number identifying a group of IP networks that serves the content to the end-user.
+PageAction,asnLatitude,The latitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's latitude.
+PageAction,asnLongitude,The longitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's longitude.
+PageAction,asnOrganization,"The organization that owns the Autonomous System Number. Often an ISP, sometimes a private company or institution."
+PageAction,browserHeight,The height of the end user's browser window at the time when the PageAction occurred.
+PageAction,browserWidth,The width of the end user's browser window at the time when the PageAction occurred.
+PageAction,city,"The city in which the PageView event occurred, such as Portland or Seattle."
+PageAction,countryCode,"The country from which the browser initiated the page load. For a list of country codes, see ISO 3166-1 alpha-2."
+PageAction,currentUrl,The URL on which the PageAction is occurring. This URL may be different from the Page URL.
+PageAction,deviceType,"The type of device that loaded the page: either mobile, tablet, or desktop."
+PageAction,duration,The browser response time in seconds. Derived from the Navigation Timing API as loadEventEnd minus navigationStart. Inclusive of other duration measurements.
+PageAction,name,The name of the invoked web transaction. For example: Controller/customers/show.
+PageAction,pageUrl,The URL of the page that was loaded for the PageView. For example: http://www.newrelic.com. This URL does not include query parameters.
+PageAction,referrerUrl,The URL of the page that loaded before the PageAction occurred.
+PageAction,regionCode,"The specific administrative division within a country where the PageView event occurred. In the United States, regions correspond to state codes, such as WA or NY. Outside the United States, a country's regions correspond to numerical codes."
+PageAction,session,A unique identifier for a single session. Sessions expire when the user closes the browser. A new identifier will be assigned when the user opens up a new browser window.
+PageAction,timeSinceLoad,The time (in seconds) elapsed from when the page was requested to when the PageAction was created.
+PageAction,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+PageAction,userAgentName,"The browser’s name, such as Chrome and Firefox, obtained from the “User-Agent” header of an HTTP request."
+PageAction,userAgentOS,"The browser’s reported operating system, such as Windows or Linux, that it is running on which is obtained from the “User-Agent” header of a HTTP request."
+PageAction,userAgentVersion,The browser’s reported software version which is obtained from the “User-Agent” header of an HTTP request.
+PageView,appId,"The ID of your application, as recorded by New Relic."
+PageView,appName,The name of the application that handled the request as shown in New Relic Browser.
+PageView,asn,Autonomous System Number: a unique number identifying a group of IP networks that serves the content to the end-user.
+PageView,asnLatitude,The latitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's latitude.
+PageView,asnLongitude,The longitude of the geographic center of the postal code where the Autonomous System Network is registered. This is not the end user's longitude.
+PageView,asnOrganization,"The organization that owns the Autonomous System Number. Often an ISP, sometimes a private company or institution."
+PageView,backendDuration,The back-end response time in seconds.
+PageView,browserTransactionName,The transaction name (page view group) as it appears in New Relic Browser.
+PageView,city,"The city in which the PageView event occurred, such as Portland or Seattle."
+PageView,connectionSetupDuration,The time to establish a connection with the server in seconds (inclusive of secureHandshakeDuration). Derived from the Navigation Timing API as connectEnd minus connectStart.
+PageView,countryCode,"The country from which the browser initiated the page load. For a list of country codes, see ISO 3166-1 alpha-2."
+PageView,deviceType,"The type of device that loaded the page: either mobile, tablet, or desktop."
+PageView,dnsLookupDuration,The time to resolve the DNS record for the top-level resource (in seconds). Derived from the Navigation Timing API as domainLookupEnd minus domainLookupStart.
+PageView,domain,The domain portion of the request URL.
+PageView,domProcessingDuration,The time it takes to parse the HTML into a DOM and retrieve or execute synchronous scripts.
+PageView,duration,The browser response time in seconds. Derived from the Navigation Timing API as loadEventEnd minus navigationStart. Inclusive of other duration measurements.
+PageView,httpResponseCode,The HTTP response code associated with the transaction.
+PageView,name,The name of the invoked web transaction. For example: Controller/customers/show.
+PageView,networkDuration,"The total time spent in redirects as well as in requesting and receiving HTML (in seconds). If webAppDuration (server side timing information) is not available, time on the server will be included in this duration."
+PageView,pageRenderingDuration,"The page rendering phase is the time between DOM completion (domContentLoadedEventEnd) and the window load event (loadEventEnd), in seconds. This phase measures browser-side processing and display of the page content."
+PageView,pageUrl,The URL of the page that was loaded for the PageView. For example: http://www.newrelic.com. This URL does not include query parameters.
+PageView,queueDuration,The total time the request waits for a service to initiate (in seconds).
+PageView,regionCode,"The specific administrative division within a country where the PageView event occurred. In the United States, regions correspond to state codes, such as WA or NY. Outside the United States, a country's regions correspond to numerical codes."
+PageView,request.headers.contentLength,Incoming request size in bytes as read from the Content-Length HTTP request header.
+PageView,request.method,The HTTP request method used. For example: `POST` or `GET`.
+PageView,response.headers.contentType,"For an HTTP response, the data type of the returned response. For example: `text/html` or `application/json`."
+PageView,secureHandshakeDuration,"A subset of connectionSetupDuration, the time to establish a TLS connection with the server. Derived from the Navigation Timing API as connectEnd minus secureConnectionStart (in seconds)."
+PageView,session,A unique identifier for a single session. Sessions expire when the user closes the browser. A new identifier will be assigned when the user opens up a new browser window.
+PageView,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+PageView,totalTime,"The sum of all async components' duration, in seconds. An async component is a method or function where there is no instrumented encapsulating method or function."
+PageView,userAgentName,"The browser’s name, such as Chrome and Firefox, obtained from the “User-Agent” header of an HTTP request."
+PageView,userAgentOS,"The browser’s reported operating system, such as Windows or Linux, that it is running on which is obtained from the “User-Agent” header of a HTTP request."
+PageView,userAgentVersion,The browser’s reported software version which is obtained from the “User-Agent” header of an HTTP request.
+PageView,webAppDuration,The total server-side response time for the top-level resource of the PageView (in seconds) as measured by the APM agent.
+ProcessSample,agentName,The name of the agent (Infrastructure).
+ProcessSample,agentVersion,The version of the New Relic Infrastructure agent.
+ProcessSample,commandLine,The full command line for the current process. This command line will be sanitized by default to strip options and arguments from the command line to prevent accidental leakage of private information.
+ProcessSample,commandName,The base name of the command line's path to the process's form.
+ProcessSample,contained,Returns true if the process is running inside a container; false if not inside a container.
+ProcessSample,containerId,"For processes running inside a Docker container, the unique Docker container ID  for this process."
+ProcessSample,containerImage,"For processes running inside a Docker container, the Docker image ID  for the image this process is based on."
+ProcessSample,containerImageName,"For processes running inside a Docker container, the Docker image name  for this process."
+ProcessSample,containerLabel_KEY,"For processes running inside a Docker container, the Docker label  associated with this process."
+ProcessSample,containerName,"For processes running inside a Docker container, the Docker container name  for this process"
+ProcessSample,cpuPercent,"The combined CPU usage (of all types, including system, user, I/O, depending on platform), by CPU core, for this process at a single point in time. For systems with more than one CPU core, this percentage may be greater than 100%."
+ProcessSample,cpuSystemPercent,The system-time CPU usage component used by the process.
+ProcessSample,cpuUserPercent,The user-time CPU usage component used by the process.
+ProcessSample,entityID,New Relic's unique ID number for the entity that is reporting data. This is used by New Relic to distinguish between customers and their entities.
+ProcessSample,fullHostname,The fully qualified (DNS) hostname.
+ProcessSample,hostname,The short version of the entity's name.
+ProcessSample,ioReadBytesPerSecond,The number of bytes read from all storage devices per second.
+ProcessSample,ioReadCountPerSecond,The number of disk read operations by the process per second.
+ProcessSample,ioTotalReadBytes,Counts bytes that the process caused to be fetched from the storage layer.
+ProcessSample,ioTotalReadCount,Cumulative number of disk read operations by this process.
+ProcessSample,ioTotalWriteBytes,Counts bytes that the process caused to be sent to the storage layer.
+ProcessSample,ioTotalWriteCount,Cumulative number of disk write operations by this process.
+ProcessSample,ioWriteBytesPerSecond,The number of bytes written by this process per second.
+ProcessSample,ioWriteCountPerSecond,The number of disk write operations by the process per second.
+ProcessSample,kernelVersion,"The Linux kernel version, in string format."
+ProcessSample,linuxDistribution,The name of the Linux distribution the server is using.
+ProcessSample,memoryResidentSizeBytes,"The total amount of physical memory in use for the process, in bytes."
+ProcessSample,memoryVirtualSizeBytes,"The total amount of virtual memory reserved for the process, in bytes."
+ProcessSample,netIoTotalReceivedPackets,Cumulative number of net packets received by this process.
+ProcessSample,netIoTotalSentPackets,Cumulative number of net packets transmitted by this process.
+ProcessSample,operatingSystem,The operating system on which the agent is installed.
+ProcessSample,operatingSystem,The operating system on which the agent is installed.
+ProcessSample,parentProcessId,The unique parent identification number (PID) for this process.
+ProcessSample,processDisplayName,The display name (friendly name) of the process.
+ProcessSample,processId,The unique process identification number for this process.
+ProcessSample,state,The current process status as a platform-specific state name. For example: running or sleeping.
+ProcessSample,threadCount,The number of threads active for this process.
+ProcessSample,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+ProcessSample,userId,The user identifier under which the process is running.
+ProcessSample,userName,"The username of the owner of the process; for example, root or ubuntu."
+ProcessSample,windowsFamily,The Windows family indicates whether the OS is a server or desktop targeted system.
+ProcessSample,windowsPlatform,The full product name of the installed version of Windows.
+ProcessSample,windowsVersion,The combined Windows version and build-number string of the OS.
+StorageSample,agentName,The name of the agent (Infrastructure).
+StorageSample,agentVersion,The version of the New Relic Infrastructure agent.
+StorageSample,device,The device name.
+StorageSample,diskFreeBytes,"The cumulative disk space that is free across all supported devices. (To find per-device values, use StorageSample events.)"
+StorageSample,diskFreePercent,The cumulative disk emptiness percentage.
+StorageSample,diskTotalBytes,The cumulative total disk space on system.
+StorageSample,diskUsedBytes,"The cumulative disk space used across all supported devices, in bytes."
+StorageSample,diskUsedPercent,The cumulative disk fullness percentage.
+StorageSample,entityAndMountPoint,A unique identifier concatenating the entityId and mountPoint attributes.
+StorageSample,entityID,New Relic's unique ID number for the entity that is reporting data. This is used by New Relic to distinguish between customers and their entities.
+StorageSample,filesystemType,The operating system's specific file system type. For example: xfs or ext4.
+StorageSample,fullHostname,The fully qualified (DNS) hostname.
+StorageSample,hostname,The short version of the entity's name.
+StorageSample,isReadOnly,"If the system is set to be read-only, this value will be true, otherwise false. These values are string literals, not booleans, to allow for faceting functionality in New Relic Insights."
+StorageSample,kernelVersion,"The Linux kernel version, in string format."
+StorageSample,linuxDistribution,The name of the Linux distribution the server is using.
+StorageSample,mountPoint,The location of the device in the operating system's file system.
+StorageSample,operatingSystem,The operating system on which the agent is installed.
+StorageSample,operatingSystem,The operating system on which the agent is installed.
+StorageSample,readBytesPerSecond,The number of bytes read per second from the device during the last sampling period.
+StorageSample,readIoPerSecond,The average number of read I/O operations per second during the sampling period.
+StorageSample,readUtilizationPercent,The percent of totalUtilizationPercent dedicated to read I/O operations.
+StorageSample,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+StorageSample,totalUtilizationPercent,The percent of time spent waiting for read or write disk I/O operations.
+StorageSample,windowsFamily,The Windows family indicates whether the OS is a server or desktop targeted system.
+StorageSample,windowsPlatform,The full product name of the installed version of Windows.
+StorageSample,windowsVersion,The combined Windows version and build-number string of the OS.
+StorageSample,writeBytesPerSecond,The number of bytes per second written to the device during the last sampling period.
+StorageSample,writeIoPerSecond,The average number of write I/O operations per second during the sample period.
+StorageSample,writeUtilizationPercent,The percent of totalUtilizationPercent dedicated to write I/O operations.
+Span,appId,The unique identifier assigned by New Relic for the service/application where the Transaction was created. Ex: 6637898.
+Span,appName,The application name set in the New Relic agent configuration.
+Span,category,"The span type category, such as generic, datastore, or http (external). The `category` defines the type of span and dictates UI display options, such as the charts available, and the collection of additional attributes."
+Span,component,"For datastore spans: the database vendor or driver. Ex: Redis, ActiveRecord, MySql. For external spans: the framework used to make the connection. Ex: OkHttp, Net::HTTP. Reported when the attribute category = datastore or external."
+Span,containerId,The New Relic APM agent collects the containerId when running in a containerized context.
+Span,db.instance,"The database name. For example, the name of the database for a given JDBC database connection URL in Java. Ex: `dbc.url=""jdbc:mysql://mysql-db.servers.net:3306/accounts` the `b.instance`value is accounts.
+Reported when the attribute category = datastore."
+Span,db.statement,"The database statement in the format most permissive by configuration. Ex: for component = MySQL, SELECT * FROM accounts or for component = memcached, get account/access_level/1234.
+Reported when the attribute category = datastore."
+Span,duration,Span's elapsed time in seconds. Ex: 0.0016667842864990234
+Span,entityGuid,"The GUID, assigned by New Relic, for the New Relic-monitored entity. This is used in  the distributed tracing trace context payload for correlation. entityGuid is stored as a Base64 encoded value."
+Span,guid,The segment identifier. This is equivalent to `spanID` in OpenTracing semantics. Ex: 7156abe712d110f9.
+Span,host,"The name of the application host that processed this request, as identified by the reporting agent. Ex: ip-10-1-34-88,
+ede2fff1efbe, apphost.domain.com."
+Span,http.method,"The HTTP method or language method / function used for the call. Reported when the attribute category = http. Ex: GET, POST."
+Span,http.url,"External URI for the call, reported when attribute category = http. MUST NOT contain user, password, or query parameters."
+Span,name,The span name that best represents the operation.
+Span,parentId,The span parent's GUID (may not be present for the root span).
+Span,peer.address,"The address of the datastore, including the host name and the port, path, or id. Ex: mysql-db.servers.net:3306. Reported when the attribute category = datastore."
+Span,peer.hostname,The hostname of the database. Ex: mysql-db.servers.net. Reported when the attribute category = datastore.
+Span,priority,A float value set by the first New Relic agent that’s part of the request that indicates priority for saving the trace in situations where the sampling reservoir has exceeded capacity.
+Span,realAgentId,The ID of the New Relic agent that is reporting.
+Span,sampled,Whether the request route was chosen to be sampled for tracing.
+Span,span.kind,"For spans that represent entry or exit into the process, the value for span.kind will be server for entry or client for exit. Datastore and external (http) spans will always have the value client."
+Span,timestamp,Unix timestamp in milliseconds when the span started. Ex: 1548271835649
+Span,traceId,The unique correlation ID used to identify a single request as it crosses inter and intra process boundaries. The traceId is the unique identifier that allows linking spans in a distributed trace. Ex: 6ff9fa3b3f317d35
+Span,transactionId,The GUID of the New Relic Transaction associated with the span. Ex: 82ba2b6d3a4984c7
+Span,type,The New Relic event type. For example: `Transaction` or `Span`.
+SyntheticCheck,duration,"The total time between the beginning of the first HTTP request and the end of the final HTTP request, in milliseconds."
+SyntheticCheck,error,"Error message returned during the monitor run, if an error message was received."
+SyntheticCheck,id,A unique number identifying this monitor check.
+SyntheticCheck,location,"The location from which the monitor check ran. For example, AWS_US_EAST_1 identifies a location on the east coast of the United States."
+SyntheticCheck,locationLabel,The check location (user friendly).
+SyntheticCheck,monitorId,A unique number identifying a particular monitor.
+SyntheticCheck,monitorName,"The name of the monitor, as shown in the Synthetics interface."
+SyntheticCheck,result,Whether the monitor run succeeded.
+SyntheticCheck,timestamp,The start time of the job in epoch milliseconds.
+SyntheticCheck,totalRequestBodySize,"The size of the body request to the host, in bytes."
+SyntheticCheck,totalRequestHeaderSize,"The size of the header request to the host, in bytes."
+SyntheticCheck,totalResponseBodySize,"The size of the response body returned by the host, in bytes."
+SyntheticCheck,totalResponseHeaderSize,"The size of the response header returned by the host, in bytes."
+SyntheticCheck,type,"The monitor type. Options include: SIMPLE, BROWSER, SCRIPT_BROWSER, API_TEST."
+SyntheticCheck,typeLabel,The user-friendly name of the monitor type.
+SyntheticRequest,checkId,The unique identifier of the check that triggered this request.
+SyntheticRequest,contentCategory,"A generalized version of the media type of the content returned by the host; for example, html or javascript. To query the exact media type, use the contentType attribute."
+SyntheticRequest,contentType,"The media type [external link] of the content returned by the host; for example, text/html or image/gif."
+SyntheticRequest,domain,"The domain portion of the request URL. To retrieve the entire URL, use the URL attribute."
+SyntheticRequest,duration,"The total time for this request, in milliseconds."
+SyntheticRequest,durationBlocked,"The total time this request was blocked, in milliseconds."
+SyntheticRequest,durationConnect,"The total time this request was establishing a connection, in milliseconds. This is inclusive of the timing from durationSSL."
+SyntheticRequest,durationDNS,"The total time this request resolving DNS, in milliseconds."
+SyntheticRequest,durationReceive,"The total time this request was receiving data, in milliseconds."
+SyntheticRequest,durationSend,"The total time this request was sending data, in milliseconds."
+SyntheticRequest,durationSSL,"The total time spent establishing an SSL connection, in milliseconds."
+SyntheticRequest,durationWait,"The total time this request was waiting, in milliseconds."
+SyntheticRequest,externalResource,Whether the resource returned by the host is from an external domain. Returns TRUE for an external domain.
+SyntheticRequest,host,The hostname of the server that processed the request.
+SyntheticRequest,id,A unique number identifying this monitor check.
+SyntheticRequest,isAjax,"Whether the request is an AJAX request, determined by the HTTP_X_REQUESTED_WITH header."
+SyntheticRequest,jobId,Alias for checkId.
+SyntheticRequest,location,"The location from which the monitor check ran. For example, AWS_US_EAST_1 identifies a location on the east coast of the United States."
+SyntheticRequest,locationLabel,The request location (user friendly).
+SyntheticRequest,monitorName,"The name of the monitor, as shown in the Synthetics interface."
+SyntheticRequest,onPageContentLoad,"The total time to completely load and parse the initial HTML document, in milliseconds. This does not include external resources such as stylesheets, images and subframes."
+SyntheticRequest,onPageLoad,"The total time to load the page and all dependent resources, in milliseconds."
+SyntheticRequest,pageref,The page request to which the requested resource belongs. Page requests are numbered from page_0 upward.
+SyntheticRequest,path,"The path portion of the request URL. To retrieve the entire URL, use the URL attribute."
+SyntheticRequest,requestBodySize,"The size of the body request to the host, in bytes."
+SyntheticRequest,requestHeaderSize,"The size of the header request to the host, in bytes."
+SyntheticRequest,responseBodySize,"The size of the response body from the host, in bytes."
+SyntheticRequest,responseCode,"The HTTP response code returned by the host; for example, 200, 400, 503, atc."
+SyntheticRequest,responseHeaderSize,"The size of the response header from the host, in bytes."
+SyntheticRequest,serverIPAddress,The IP address of the server that processed the request.
+SyntheticRequest,URL,The full request URL.
+SyntheticRequest,verb,The protocol (such as GET or POST) used to make the request.
+SyntheticsPrivateLocationStatus,checksPending,Count of how many checks are scheduled to run in that location.
+SyntheticsPrivateLocationStatus,name,"The private location name that New Relic sets internally, based  on the accountId, location name, and private location key."
+SyntheticsPrivateLocationStatus,timestamp,The start time of the job in epoch milliseconds.
+SyntheticsPrivateMinion,minionId,The unique identifier of this minion.
+SyntheticsPrivateMinion,minionJobsFailed,The number of jobs this minion has failed.
+SyntheticsPrivateMinion,minionJobsFinished,The number of jobs this minion has finished.
+SyntheticsPrivateMinion,minionJobsQueued,The number of jobs this minion is currently working on.
+SyntheticsPrivateMinion,minionJobsReceived,The number of jobs this minion has received to process.
+SyntheticsPrivateMinion,minionJobsStarted,The number of jobs this minion has started.
+SyntheticsPrivateMinion,minionJobsTimedout,The number of jobs that reached the maximum execution time.
+SyntheticsPrivateMinion,minionLocation,The location code this minion is operating in.
+SyntheticsPrivateMinion,minionStartTimestamp,The time which this specific minion started.
+SystemSample,agentName,The name of the agent (Infrastructure).
+SystemSample,agentVersion,The version of the New Relic Infrastructure agent.
+SystemSample,cpuIdlePercent,The portion of the current CPU utilization capacity that is idle.
+SystemSample,cpuIoWaitPercent,The portion of the current CPU utilization composed only of I/O wait time usage.
+SystemSample,cpuPercent,"Total CPU utilization as a percentage. This is not an actual recorded value; it is an alias that combines percentage data from cpuSystemPercent, cpuUserPercent, cpuIoWaitPercent and cpuStealPercent."
+SystemSample,cpuStealPercent,The portion of time when a virtualized CPU is waiting for the hypervisor to make real CPU time available to it.
+SystemSample,cpuSystemPercent,The portion of the current CPU utilization composed only of system time usage.
+SystemSample,cpuUserPercent,The portion of the current CPU utilization composed only of user time usage.
+SystemSample,diskFreeBytes,"The cumulative disk space that is free across all supported devices. (To find per-device values, use StorageSample events.)"
+SystemSample,diskFreePercent,The cumulative disk emptiness percentage.
+SystemSample,diskReadsPerSecond,The number of read I/O operations per second.
+SystemSample,diskReadUtilizationPercent,The portion of disk I/O utilization for read operations.
+SystemSample,diskTotalBytes,The cumulative total disk space on system.
+SystemSample,diskUsedBytes,"The cumulative disk space used across all supported devices, in bytes."
+SystemSample,diskUsedPercent,The cumulative disk fullness percentage.
+SystemSample,diskUtilizationPercent,The percent of time spent waiting for read or write disk I/O operations.
+SystemSample,diskWritesPerSecond,The number of write I/O operations per second.
+SystemSample,diskWriteUtilizationPercent,The portion of disk I/O utilization for write operations.
+SystemSample,entityID,New Relic's unique ID number for the entity that is reporting data. This is used by New Relic to distinguish between customers and their entities.
+SystemSample,fullHostname,The fully qualified (DNS) hostname.
+SystemSample,hostname,The short version of the entity's name.
+SystemSample,kernelVersion,"The Linux kernel version, in string format."
+SystemSample,linuxDistribution,The name of the Linux distribution the server is using.
+SystemSample,loadAverageFifteenMinute,"Over the last fifteen minutes, the average number of system processes, threads, or tasks that are waiting and ready for CPU time."
+SystemSample,loadAverageFiveMinute,"Over the last 5 minutes, the average number of system processes, threads, or tasks that are waiting and ready for CPU time."
+SystemSample,loadAverageOneMinute,"Over the last minute, the average number of system processes, threads, or tasks that are waiting and ready for CPU time."
+SystemSample,memoryFreeBytes,"The portion of free memory available to this server, in bytes."
+SystemSample,memoryTotalBytes,"The total amount of memory, in bytes, available to this server."
+SystemSample,memoryUsedBytes,"The portion of available memory that is in use on this server, in bytes."
+SystemSample,operatingSystem,The operating system on which the agent is installed.
+SystemSample,operatingSystem,The operating system on which the agent is installed.
+SystemSample,swapFreeBytes,"The portion of available swap space on this server that is free, in bytes. This is a Linux-only feature."
+SystemSample,swapTotalBytes,"The total amount of swap space available to the server, in bytes. This is a Linux-only feature."
+SystemSample,swapUsedBytes,"The portion of available swap space on this server that is in use, in bytes. This is a Linux-only feature."
+SystemSample,timestamp,"The time (date, hour, minute, second) at which the interaction occurred."
+SystemSample,windowsFamily,The Windows family indicates whether the OS is a server or desktop targeted system.
+SystemSample,windowsPlatform,The full product name of the installed version of Windows.
+SystemSample,windowsVersion,The combined Windows version and build-number string of the OS.
+Transaction,accountId,The unique ID of the account associated with the service/application where the Transaction was created.
+Transaction,appId,The unique identifier assigned by New Relic for the service/application where the Transaction was created. Ex: 6637898.
+Transaction,appName,The application name set in the New Relic agent configuration.
+Transaction,databaseCallCount,The number of database calls made by this transaction.
+Transaction,databaseDuration,The database response time in seconds.
+Transaction,duration,"The total server-side response time for the transaction, in seconds. Does not include request queueing time."
+Transaction,entityGuid,"The GUID, assigned by New Relic, for the New Relic-monitored entity (host, application, etc.)."
+Transaction,errorMessage,"(.NET and PHP agents only) This will be server and platform specific. The message contained within an error for the transaction. If an error occurs during a transaction, the error may skew the duration of the event."
+Transaction,errorType,"This will be server and platform specific. The class or classification of the error. If multiple errors occur, only the first will be shown. If an error occurs during a transaction, the error may skew the duration of the event."
+Transaction,externalCallCount,The number of external calls made by this transaction.
+Transaction,externalDuration,"The total response time of all externals, in seconds."
+Transaction,gcCumulative,"(Ruby agent only)The total time spent in garbage collection during this transaction, in seconds."
+Transaction,guid,The identifier for the transaction.
+Transaction,host,The name of the application host that processed this request.
+Transaction,httpResponseCode,The HTTP response code associated with the transaction.
+Transaction,memcacheDuration,"The memcache response time, in seconds."
+Transaction,name,The name of the transaction associated with this data. Ex: Controller/customers/show.
+Transaction,parent.account,"If a distributed tracing payload is received, this is the account identifier for the transaction's upstream caller."
+Transaction,parent.app,"If a distributed tracing payload is received, this is the application identifier. APM agents retrieve this value in the connect response under the key `primary_application_id`."
+Transaction,parent.transportDuration,"When distributed tracing is enabled and a payload is received, the difference in time between the timestamp given for when the payload was sent and the moment it was processed."
+Transaction,parent.transportType,"When a distributed tracing payload is received, the method of transport for the payload. For example: `Unknown`, `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP, `Queue`, or `Other`."
+Transaction,parent.type,"If a distributed trace payload was received, the parent's data source type. For example: `App`, `Browser`, or `Mobile`."
+Transaction,parentId,"If a distributed trace payload was received, the guid of this parent transaction."
+Transaction,priority,Likelihood this event will be saved.
+Transaction,queueDuration,"The total time the requester waits for a service to initiate, in seconds."
+Transaction,realAgentId,The ID of the New Relic agent that is reporting.
+Transaction,request.headers.contentLength,Incoming request size in bytes as read from the Content-Length HTTP request header.
+Transaction,request.headers.contentType,Incoming request content-type as read from the HTTP request header Content-Type. For example: `application/octet-stream`.
+Transaction,request.headers.host,The name from the HTTP host request header.
+Transaction,request.headers.referer,The incoming request referer as read from the Referer request header.
+Transaction,request.headers.User-Agent,The contents of the User-Agent HTTP header.
+Transaction,request.method,The HTTP request method used. For example: `POST` or `GET`.
+Transaction,requests.header.accept,The types as read from the HTTP Accept request header.
+Transaction,response.headers.contentLength,The outgoing response size in bytes as read from the Content-Length response header.
+Transaction,response.headers.contentType,"For an HTTP response, the data type of the returned response. For example: `text/html` or `application/json`."
+Transaction,sampled,Indicates whether this event was sampled for inclusion in a distributed trace. Only present when distributed tracing is enabled.
+Transaction,totalTime,"The sum of all async components' duration, in seconds. An async component is a method or function where there is no instrumented encapsulating method or function."
+Transaction,transactionSubType,The detailed type of transaction. Ex: Controller or Custom.
+Transaction,transactionType,The type of the transaction. For example: Web or Background (non-web).
+Transaction,tripId,"A randomly-generated string that is consistent for every transaction in a cross-application trace. This string can be used to identify the set of transactions associated with a particular trip or trace. If distributed tracing is enabled, this will be reported as `traceId`."
+Transaction,type,The New Relic event type. For example: `Transaction` or `Span`.
+Transaction,webDuration,"The duration of the transaction, equivalent to duration."
+TransactionError,accountId,The unique ID of the account associated with the service/application where the Transaction was created.
+TransactionError,appId,The unique identifier assigned by New Relic for the service/application where the Transaction was created. Ex: 6637898.
+TransactionError,appName,The application name set in the New Relic agent configuration.
+TransactionError,databaseCallCount,The number of database calls made by this transaction.
+TransactionError,databaseDuration,The database response time in seconds.
+TransactionError,duration,"The total server-side response time for the transaction, in seconds. Does not include request queueing time."
+TransactionError,entityGuid,"The GUID, assigned by New Relic, for the New Relic-monitored entity (host, application, etc.)."
+TransactionError,error.class,The class name or type for the error. This will be server and platform specific.
+TransactionError,error.expected,Determines whether an error is expected or not. Expected errors do not affect error rates or Apdex.
+TransactionError,error.message,The error message for the transaction. This will be server and platform specific.
+TransactionError,errorType,"This will be server and platform specific. The class or classification of the error. If multiple errors occur, only the first will be shown. If an error occurs during a transaction, the error may skew the duration of the event."
+TransactionError,externalCallCount,The number of external calls made by this transaction.
+TransactionError,externalDuration,"The total response time of all externals, in seconds."
+TransactionError,gcCumulative,"(Ruby agent only)The total time spent in garbage collection during this transaction, in seconds."
+TransactionError,guid,The identifier for the transaction.
+TransactionError,host,The name of the application host that processed this request.
+TransactionError,httpResponseCode,The HTTP response code associated with the transaction.
+TransactionError,memcacheDuration,"The memcache response time, in seconds."
+TransactionError,parent.account,"If a distributed tracing payload is received, this is the account identifier for the transaction's upstream caller."
+TransactionError,parent.app,"If a distributed tracing payload is received, this is the application identifier. APM agents retrieve this value in the connect response under the key `primary_application_id`."
+TransactionError,parent.transportDuration,"When distributed tracing is enabled and a payload is received, the difference in time between the timestamp given for when the payload was sent and the moment it was processed."
+TransactionError,parent.transportType,"When a distributed tracing payload is received, the method of transport for the payload. For example: `Unknown`, `HTTP`, `HTTPS`, `Kafka`, `JMS`, `IronMQ`, `AMQP, `Queue`, or `Other`."
+TransactionError,parent.type,"If a distributed trace payload was received, the parent's data source type. For example: `App`, `Browser`, or `Mobile`."
+TransactionError,parentId,"If a distributed trace payload was received, the guid of this parent transaction."
+TransactionError,port,"The listening port of the transaction that generated the event. This information will not always be available, so this attribute may not always be reported."
+TransactionError,priority,Likelihood this event will be saved.
+TransactionError,queueDuration,"The total time the requester waits for a service to initiate, in seconds."
+TransactionError,realAgentId,The ID of the New Relic agent that is reporting.
+TransactionError,request.headers.contentLength,Incoming request size in bytes as read from the Content-Length HTTP request header.
+TransactionError,request.headers.contentType,Incoming request content-type as read from the HTTP request header Content-Type. For example: `application/octet-stream`.
+TransactionError,request.headers.host,The name from the HTTP host request header.
+TransactionError,request.headers.referer,The incoming request referer as read from the Referer request header.
+TransactionError,request.headers.User-Agent,The contents of the User-Agent HTTP header.
+TransactionError,request.method,The HTTP request method used. For example: `POST` or `GET`.
+TransactionError,requests.header.accept,The types as read from the HTTP Accept request header.
+TransactionError,response.headers.contentLength,The outgoing response size in bytes as read from the Content-Length response header.
+TransactionError,response.headers.contentType,"For an HTTP response, the data type of the returned response. For example: `text/html` or `application/json`."
+TransactionError,sampled,Indicates whether this event was sampled for inclusion in a distributed trace. Only present when distributed tracing is enabled.
+TransactionError,threadConcurrency,"A measure of ""thread utilization"", representing the number of threads handling concurrent requests."
+TransactionError,timestamp,The start time of the job in epoch milliseconds.
+TransactionError,traceId,"Links all New Relic trace data (events, etc.) within the call chain together. Included when Distributed Tracing is enabled."
+TransactionError,transactionName,Name of the transaction in which the error occurred. For example: `Controller/customers/show`. Value may be `Unknown` if error occurs outside of a transaction.
+TransactionError,transactionUiName,The UI display name equivalent of transactionName.
+TransactionError,type,The New Relic event type. For example: `Transaction` or `Span`.
+TransactionError,wsgi.input.calls.read,(Python agent only) The number of calls to read() by the WSGI server to handle request.
+TransactionError,wsgi.input.calls.readline,(Python agent only) The number of calls to readline() by the WSGI server to handle request.
+TransactionError,wsgi.input.calls.readlines,(Python agent only) The number of calls to readlines() by the WSGI server to handle request.
+TransactionError,wsgi.output.calls.write,(Python agent only) Number of calls to yield by the WSGI server to send response.
+TransactionError,wsgi.output.calls.yield,(Python agent only) Number of calls to yield by the WSGI server to send response.
